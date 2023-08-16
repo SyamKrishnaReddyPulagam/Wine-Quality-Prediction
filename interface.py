@@ -23,9 +23,6 @@ if nav=="VISUALIZATION":
     st.success("Tick below to view the dataset")
     if st.checkbox("view dataset"):
         st.dataframe(data,width=500,height=500)
-
-    y=sns.pairplot(data = data, vars=['total sulfur dioxide','alcohol','quality'])
-    st.pyplot(y)
     
     graph = st.selectbox("What kind of Graph ? ",["Non-Interactive","Interactive"])
     val = st.slider("Filter data using amount of alcohol",7,15)
